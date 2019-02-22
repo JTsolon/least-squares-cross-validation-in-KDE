@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 20 22:29:26 2019
 
-@author: jiangtao
-"""
 import numpy as np
 import statsmodels.api as sm
 from scipy.optimize import minimize
@@ -56,8 +52,3 @@ def h_cv(sample,a,b):
     #value=res.fun
     
     return h[0]
-if __name__=='__main__':
-    import random
-    random.seed(1234)
-    samples=[[random.gauss(2,1) for i in range(500)] for i in range(10)]
-    h=[h_cv(sample,-1,5) for sample in samples]
