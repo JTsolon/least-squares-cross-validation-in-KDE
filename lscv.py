@@ -8,6 +8,12 @@ from scipy.integrate import quad
 '''
 This module is designed to find the optimal bandwith under lscv criteria in KDE.
 By calling h_cv(sample,a,b), you can get the optimal bandwith that the function return.
+parameters:
+sample: array-like
+a: lower bound of the population, not necessarily accurate
+b: upper bound of the population, not necessarily accurate
+
+return: bandwidth, float
 '''
 
 #compute the asymptotic squared error, return the cv,squared error minus the integral of raw pdf
